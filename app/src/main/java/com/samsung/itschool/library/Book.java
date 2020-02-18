@@ -6,17 +6,19 @@ public class Book {
     String author = "";
     String title = "";
     int year;
+    String genre;
 
-    public Book(String author, String title, int year) {
+    public Book(String author, String title, int year , String genre) {
         this.author = author;
         this.title = title;
         this.year = year;
+        this.genre = genre;
     }
 
     @Override
     public String toString() {
         return "Author: " + author + "\nTitle: " + title + "\nYear: "
-                + year;
+                + year + "\nGenre: " + genre;
     }
 
     @Override
