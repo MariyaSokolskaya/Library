@@ -7,9 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class OpenHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "library.db";
+    public static final String DATABASE_NAME = "library1.db";
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_TABLE = "library";
+    public static final String LIBRARY_ID = "_id";
     public static final String LIBRARY_TITLE = "title";
     public static final String LIBRARY_AUTHOR = "author";
     public static final String LIBRARY_GENRE = "genre";
@@ -22,7 +23,7 @@ public class OpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sql = "CREATE TABLE " + DATABASE_TABLE +
-                " (_id integer primary key autoincrement, " +
+                "(" + LIBRARY_ID + " integer primary key autoincrement, " +
                 LIBRARY_TITLE + " text, " + LIBRARY_AUTHOR + " text, "+
                 LIBRARY_GENRE + " text, " + LIBRARY_YEAR +
                 " integer);";

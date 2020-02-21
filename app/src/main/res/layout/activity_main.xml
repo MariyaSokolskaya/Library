@@ -10,7 +10,71 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"/>
+        android:text="@string/title"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold|italic"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Название книги"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/titleBook"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Автор книги"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/authorBook"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Год издания книги"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/yearBook"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Жанр книги"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/genreBook"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="insertBookInDB"
+            android:text="Записать книгу в базу"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="loadBooksFromDB"
+            android:text="Показать все книги"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
